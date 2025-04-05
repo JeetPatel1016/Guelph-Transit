@@ -12,16 +12,18 @@ jobs:
 
     steps:
       - name: Checkout Branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Setup NodeJS
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.3.0
+        with:
+          node-version: 20.12.2
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        uses: dudeofawesome/npm-install@v1.0.0
 
       - name: Build project
-        uses: npm run build
+        uses: chimpwizards-pipeline/npm-build@v1.0.7
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
