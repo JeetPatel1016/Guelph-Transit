@@ -23,7 +23,7 @@ jobs:
         uses: dudeofawesome/npm-install@v1.0.0
 
       - name: Build project
-        uses: chimpwizards-pipeline/npm-build@v1.0.7
+        uses: npm run build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4.6.2
